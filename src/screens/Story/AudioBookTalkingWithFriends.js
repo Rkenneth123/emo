@@ -355,17 +355,21 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
 
   useEffect(() => {
     const backAction = () => {
-      Alert.alert('Stop', 'Please finish the story!', [
+      Alert.alert('Stop', 'Are you sure you want to exit the app?', [
         {
           text: 'Cancel',
           onPress: () => null,
           style: 'cancel',
         },
+        {
+          text: 'Okay',
+          onPress: () => BackHandler.exitApp(),
+        },
       ]);
       return true;
     };
     const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-  }, []);
+  }, [question]);
   return (
     <ImageBackground
       source={
