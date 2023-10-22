@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "emo-social-match-up",
+    "slug": "emo-social-match-up",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/NewAssets/StartPage/LoadingScreen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iosemosocial.emosocialrepositoryapp"
+    },
+    "androidStatusBar": {
+      "translucent": true,
+      "hidden": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.iosemosocial.emosocialrepositoryapp"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9f33adbd-e97d-49a8-903a-ce0439ed0e7a"
+      }
+    }
+  }
+}
