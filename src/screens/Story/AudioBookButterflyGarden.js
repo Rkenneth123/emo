@@ -318,6 +318,12 @@ export default function AudioBookButterflyGarden({ navigation }) {
     }
   };
 
+  useEffect(() => {
+    navigation.addListener('beforeRemove', (e) => {
+      e.preventDefault();
+    });
+  }, [navigation]);
+
   return (
     <ImageBackground
       source={
@@ -342,7 +348,10 @@ export default function AudioBookButterflyGarden({ navigation }) {
       {part === 0 ? (
         <View style={styles.container}>
           <View style={styles.firstPage}>
-            <Image source={require('../../../assets/NewAssets/Story/ButterflyGarden.png')} style={styles.bodyItem} />
+            <Image
+              source={require('../../../assets/NewAssets/Story/ButterflyGarden.png')}
+              style={styles.bodyItem}
+            />
             <Button title='Start' onPress={startPage} />
           </View>
         </View>
@@ -353,7 +362,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
       ) : null}
       {showQuestion && question === 1 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What expression does Mindy wear?</Text>
           <View style={styles.optionTextContainer}>
             {questions[0].options.map((option) => {
@@ -364,8 +372,7 @@ export default function AudioBookButterflyGarden({ navigation }) {
               );
             })}
           </View>
-          </View>
-
+        </View>
       ) : null}
       {part === 2 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
@@ -374,7 +381,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
       ) : null}
       {showQuestion && question === 2 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What emotion does Mindy feel?</Text>
           <View style={styles.optionTextContainer}>
             {questions[1].options.map((option) => {
@@ -386,7 +392,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
             })}
           </View>
         </View>
-
       ) : null}
       {part === 3 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
@@ -395,7 +400,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
       ) : null}
       {showQuestion && question === 3 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What emotion do Mindy and Max feel?</Text>
           <View style={styles.optionTextContainer}>
             {questions[2].options.map((option) => {
@@ -406,8 +410,7 @@ export default function AudioBookButterflyGarden({ navigation }) {
               );
             })}
           </View>
-          </View>
-
+        </View>
       ) : null}
       {part === 4 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
@@ -416,7 +419,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
       ) : null}
       {showQuestion && question === 4 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What expression does Emma wear?</Text>
           <View style={styles.optionTextContainer}>
             {questions[3].options.map((option) => {
@@ -428,7 +430,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
             })}
           </View>
         </View>
-
       ) : null}
       {part === 5 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
@@ -437,7 +438,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
       ) : null}
       {showQuestion && question === 5 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What emotion do Emma and Alex feel?</Text>
           <View style={styles.optionTextContainer}>
             {questions[4].options.map((option) => {
@@ -449,7 +449,6 @@ export default function AudioBookButterflyGarden({ navigation }) {
             })}
           </View>
         </View>
-
       ) : null}
       {part === 6 && !showQuestion ? (
         <View style={styles.subtitleContainer}>

@@ -353,6 +353,11 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
     }
   };
 
+  useEffect(() => {
+    navigation.addListener('beforeRemove', (e) => {
+      e.preventDefault();
+    });
+  }, [navigation]);
   return (
     <ImageBackground
       source={

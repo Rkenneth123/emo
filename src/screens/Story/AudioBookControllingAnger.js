@@ -162,6 +162,12 @@ export default function AudioBookControllingAnger({ navigation }) {
     }
   };
 
+  useEffect(() => {
+    navigation.addListener('beforeRemove', (e) => {
+      e.preventDefault();
+    });
+  }, [navigation]);
+
   return (
     <ImageBackground
       source={require('../../../assets/NewAssets/Story/ControllingAnger.png')}
@@ -170,7 +176,10 @@ export default function AudioBookControllingAnger({ navigation }) {
       {part === 0 ? (
         <View style={styles.container}>
           <View style={styles.firstPage}>
-            <Image source={require('../../../assets/NewAssets/Story/ControllingAnger.png')} style={styles.bodyItem} />
+            <Image
+              source={require('../../../assets/NewAssets/Story/ControllingAnger.png')}
+              style={styles.bodyItem}
+            />
             <Button title='Start' onPress={startPage} />
           </View>
         </View>
@@ -182,7 +191,6 @@ export default function AudioBookControllingAnger({ navigation }) {
       ) : null}
       {showQuestion && question === 1 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What John do when he became angry?</Text>
           <View style={styles.optionTextContainer}>
             {questions[0].options.map((option) => {
@@ -193,8 +201,7 @@ export default function AudioBookControllingAnger({ navigation }) {
               );
             })}
           </View>
-          </View>
-
+        </View>
       ) : null}
       {part === 2 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
@@ -204,7 +211,6 @@ export default function AudioBookControllingAnger({ navigation }) {
       ) : null}
       {showQuestion && question === 2 ? (
         <View style={styles.questionContainer}>
-
           <Text style={styles.questionText}>What did his father give to John?</Text>
           <View style={styles.optionTextContainer}>
             {questions[1].options.map((option) => {
@@ -215,8 +221,7 @@ export default function AudioBookControllingAnger({ navigation }) {
               );
             })}
           </View>
-          </View>
-
+        </View>
       ) : null}
       {part === 3 && !showQuestion ? (
         <View style={styles.subtitleContainer}>
