@@ -354,9 +354,11 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
   };
 
   useEffect(() => {
-    navigation.addListener('beforeRemove', (e) => {
-      e.preventDefault();
-    });
+    if (!showQuestion && question !== 7) {
+      navigation.addListener('beforeRemove', (e) => {
+        e.preventDefault();
+      });
+    }
   }, [navigation]);
   return (
     <ImageBackground

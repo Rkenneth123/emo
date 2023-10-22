@@ -319,9 +319,11 @@ export default function AudioBookButterflyGarden({ navigation }) {
   };
 
   useEffect(() => {
-    navigation.addListener('beforeRemove', (e) => {
-      e.preventDefault();
-    });
+    if (!showQuestion && question !== 6) {
+      navigation.addListener('beforeRemove', (e) => {
+        e.preventDefault();
+      });
+    }
   }, [navigation]);
 
   return (

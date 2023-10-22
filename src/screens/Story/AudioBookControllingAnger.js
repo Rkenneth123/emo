@@ -163,9 +163,11 @@ export default function AudioBookControllingAnger({ navigation }) {
   };
 
   useEffect(() => {
-    navigation.addListener('beforeRemove', (e) => {
-      e.preventDefault();
-    });
+    if (!showQuestion && question !== 3) {
+      navigation.addListener('beforeRemove', (e) => {
+        e.preventDefault();
+      });
+    }
   }, [navigation]);
 
   return (
