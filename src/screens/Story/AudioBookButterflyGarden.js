@@ -328,7 +328,9 @@ export default function AudioBookButterflyGarden({ navigation }) {
         },
         {
           text: 'Okay',
-          onPress: () => BackHandler.exitApp(),
+          onPress: () => {
+            BackHandler.exitApp(), Speech.stop();
+          },
         },
       ]);
       return true;

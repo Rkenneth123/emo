@@ -172,7 +172,9 @@ export default function AudioBookControllingAnger({ navigation }) {
         },
         {
           text: 'Okay',
-          onPress: () => BackHandler.exitApp(),
+          onPress: () => {
+            BackHandler.exitApp(), Speech.stop();
+          },
         },
       ]);
       return true;

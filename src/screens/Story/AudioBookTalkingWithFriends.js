@@ -363,7 +363,9 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
         },
         {
           text: 'Okay',
-          onPress: () => BackHandler.exitApp(),
+          onPress: () => {
+            BackHandler.exitApp(), Speech.stop();
+          },
         },
       ]);
       return true;
