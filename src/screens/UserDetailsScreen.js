@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // marginLeft: 20,
+
     alignItems: 'center',
     gap: 40,
     marginTop: '5%',
@@ -140,7 +140,9 @@ const styles = StyleSheet.create({
     margin: 0,
     height: 50,
     width: 50,
-    marginTop: 50,
+    marginTop: 40,
+    marginBottom: 80
+
   },
   input: {
     borderWidth: 1,
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
     color: 'white',
     // alignSelf: 'stretch',
     width: '30%',
-    marginTop: 80,
+    marginTop: 75,
     margin: 32,
     height: 40,
     borderRadius: 6,

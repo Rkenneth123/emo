@@ -40,13 +40,10 @@ const styles = StyleSheet.create({
     height: null,
   },
   image2: {
-    position: 'absolute',
-    flex: 1,
-    width: 200,
-    height: 100,
-    marginLeft: -100,
-    marginTop: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
+    margin: 0,
+    height: 50,
+    width: 100,
+    marginTop: 300,
+    marginBottom: 80
   },
 });

@@ -269,6 +269,6 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 0,
     padding: 0,
-    marginTop: "5.5%"
+
   },
 });
