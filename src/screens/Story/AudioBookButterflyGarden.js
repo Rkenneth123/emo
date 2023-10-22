@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   Text,
-  StatusBar,
+  BackHandler,
   View,
   Button,
   ImageBackground,
@@ -319,12 +319,18 @@ export default function AudioBookButterflyGarden({ navigation }) {
   };
 
   useEffect(() => {
-    if (!showQuestion && question !== 6) {
-      navigation.addListener('beforeRemove', (e) => {
-        e.preventDefault();
-      });
-    }
-  }, [navigation]);
+    const backAction = () => {
+      Alert.alert('Stop', 'Please finish the story!', [
+        {
+          text: 'Cancel',
+          onPress: () => null,
+          style: 'cancel',
+        },
+      ]);
+      return true;
+    };
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+  }, []);
 
   return (
     <ImageBackground
