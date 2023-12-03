@@ -89,10 +89,7 @@ export default function DashboardScreen({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-              <Image
-                source={require('../../assets/NewAssets/Dashboard/close.png')}
-                style={styles.close}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -109,43 +106,25 @@ export default function DashboardScreen({ navigation }) {
     );
   }
   return (
-    <ImageBackground
-      source={require('../../assets/NewAssets/background1.png')}
-      style={styles.backgroundImage}
-    >
+    <ImageBackground source={require('../../assets/NewAssets/background1.png')} style={styles.backgroundImage}>
       <View style={styles.container}>
         <View style={styles.containerHeader}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Back.png')}
-              style={styles.headerBack}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Settings.png')}
-              style={styles.headerSettings}
-            />
+            <Image source={require('../../assets/NewAssets/Dashboard/Settings.png')} style={styles.headerSettings} />
           </TouchableOpacity>
         </View>
         <View style={styles.bodyContent}>
           <TouchableOpacity onPress={handlePressStory}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Story.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/9T6Lys6/Story.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePressExploreGames}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Explore.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/8xqcKXd/Explore.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePressDailyActivity}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Daily.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/6DVTzNW/Daily.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
         </View>
       </View>

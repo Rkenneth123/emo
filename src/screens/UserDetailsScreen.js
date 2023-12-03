@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  View,
-  StatusBar,
-  ImageBackground,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Alert,
-  TextInput,
-} from 'react-native';
+import { View, StatusBar, ImageBackground, StyleSheet, TouchableOpacity, Image, Alert, TextInput } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function UserDetailsScreen({ navigation }) {
@@ -63,23 +54,20 @@ export default function UserDetailsScreen({ navigation }) {
         <View style={styles.containerImage}>
           <TouchableOpacity onPress={handlePressBoy}>
             <Image
-              source={require('../../assets/boys.png')}
+              source={{ uri: 'https://i.ibb.co/86ZgPvn/boys.png' }}
               style={boy ? styles.boyImageSelected : styles.boyImage}
             />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePressGirl}>
             <Image
-              source={require('../../assets/NewAssets/UserDetails/girl.png')}
+              source={{ uri: 'https://i.ibb.co/T1mT74t/girl.png' }}
               style={girl ? styles.girlImageSelected : styles.girlImage}
             />
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity onPress={handlePress}>
-            <Image
-              source={require('../../assets/NewAssets/UserDetails/done.png')}
-              style={styles.doneImage}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/gtJChPC/done.png' }} style={styles.doneImage} />
           </TouchableOpacity>
         </View>
       </View>
@@ -141,8 +129,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     marginTop: 40,
-    marginBottom: 80
-
+    marginBottom: 80,
   },
   input: {
     borderWidth: 1,

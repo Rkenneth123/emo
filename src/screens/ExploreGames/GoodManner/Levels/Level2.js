@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { View, StatusBar, Alert, StyleSheet, Image, TouchableOpacity,Modal, ImageBackground, Text } from 'react-native';
+import {
+  View,
+  StatusBar,
+  Alert,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Modal,
+  ImageBackground,
+  Text,
+} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRoute } from '@react-navigation/native';
 
@@ -211,7 +221,7 @@ export default function GoodEmotionLevel2({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-            <Image source={require('../../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level1/close.png')} style={styles.close} />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -236,7 +246,7 @@ export default function GoodEmotionLevel2({ navigation }) {
       <View style={styles.container}>
         <View style={!showFinalResults ? styles.containerHeader : styles.containerHeader2}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image source={require('../../../../../assets/NewAssets/Dashboard/Back.png')} style={styles.headerBack} />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
             <Image
@@ -328,10 +338,7 @@ export default function GoodEmotionLevel2({ navigation }) {
                   />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handleGameReset}>
-                  <Image
-                    source={require('../../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level1/Regame.png')}
-                    style={styles.menu}
-                  />
+                  <Image source={{ uri: 'https://i.ibb.co/3FkHvNN/Regame.png' }} style={styles.menu} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handleNextLevel}>
                   <Image
@@ -344,7 +351,7 @@ export default function GoodEmotionLevel2({ navigation }) {
           </View>
         ) : (
           <View style={styles.questionContainer}>
-             <Text>{`Level # 2`}</Text>
+            <Text>{`Level # 2`}</Text>
             <Text>{`Game ${currentQuestion + 1}/5`}</Text>
             <View>
               <Image style={styles.imageQuestion} source={questions[currentQuestion].main} />
@@ -512,7 +519,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-
   },
   itemContainer: {
     flex: 1,

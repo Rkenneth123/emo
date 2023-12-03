@@ -21,17 +21,14 @@ export default function ExploreGamesScreen({ navigation }) {
   const { myPropFunction } = route.params;
 
   const handlePress1stGame = async () => {
-    myPropFunction();
     navigation.navigate('GuessEmotion');
   };
 
   const handlePress2ndGame = async () => {
-    myPropFunction();
     navigation.navigate('BehaviorEmotion');
   };
 
   const handlePress3rdGame = async () => {
-    myPropFunction();
     navigation.navigate('GoodEmotion');
   };
 
@@ -90,10 +87,7 @@ export default function ExploreGamesScreen({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-              <Image
-                source={require('../../assets/NewAssets/Dashboard/close.png')}
-                style={styles.close}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -118,24 +112,15 @@ export default function ExploreGamesScreen({ navigation }) {
       <View style={styles.container}>
         <View style={styles.containerHeader}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image
-              source={require('../../assets/NewAssets/ExploreGames/Back.png')}
-              style={styles.headerBack}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
-            <Image
-              source={require('../../assets/NewAssets/ExploreGames/Settings.png')}
-              style={styles.headerSettings}
-            />
+            <Image source={require('../../assets/NewAssets/ExploreGames/Settings.png')} style={styles.headerSettings} />
           </TouchableOpacity>
         </View>
         <View style={styles.bodyContent}>
           <TouchableOpacity onPress={handlePress1stGame}>
-            <Image
-              source={require('../../assets/NewAssets/ExploreGames/Explore/Guess1.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={require('../../assets/NewAssets/ExploreGames/Explore/Guess1.png')} style={styles.bodyItem} />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={handlePress2ndGame}>
@@ -145,10 +130,7 @@ export default function ExploreGamesScreen({ navigation }) {
             />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePress3rdGame}>
-            <Image
-              source={require('../../assets/NewAssets/ExploreGames/Explore/Good1.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={require('../../assets/NewAssets/ExploreGames/Explore/Good1.png')} style={styles.bodyItem} />
           </TouchableOpacity>
         </View>
       </View>

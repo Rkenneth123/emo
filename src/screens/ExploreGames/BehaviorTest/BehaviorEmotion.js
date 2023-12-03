@@ -152,10 +152,7 @@ export default function BehaviorEmotionScreen({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-              <Image
-                source={require('../../../../assets/NewAssets/Dashboard/close.png')}
-                style={styles.close}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -168,11 +165,9 @@ export default function BehaviorEmotionScreen({ navigation }) {
             </View>
           </View>
         </View>
-
       </Modal>
     );
   }
-
 
   return (
     <ImageBackground
@@ -182,10 +177,7 @@ export default function BehaviorEmotionScreen({ navigation }) {
       <View style={styles.container}>
         <View style={styles.containerHeader}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image
-              source={require('../../../../assets/NewAssets/Dashboard/Back.png')}
-              style={styles.headerBack}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
             <Image
@@ -196,64 +188,37 @@ export default function BehaviorEmotionScreen({ navigation }) {
         </View>
         <View style={styles.bodyContent}>
           <TouchableOpacity onPress={handleLevel1}>
-            <Image
-              source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level1.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/2Sd2nQL/Level1.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handleLevel2}>
             <View style={styles.levelsContainer}>
-              <Image
-                source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level2.png')}
-                style={styles.bodyItem}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/WWNN9cb/Level2.png' }} style={styles.bodyItem} />
               {lockLevel2 ? (
-                <Image
-                  source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Lock.png')}
-                  style={styles.lockSize}
-                />
+                <Image source={{ uri: 'https://i.ibb.co/v4PMmTg/Lock.png' }} style={styles.lockSize} />
               ) : null}
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleLevel3}>
             <View style={styles.levelsContainer}>
-              <Image
-                source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level3.png')}
-                style={styles.bodyItem}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/1rg141J/Level3.png' }} style={styles.bodyItem} />
               {lockLevel3 ? (
-                <Image
-                  source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Lock.png')}
-                  style={styles.lockSize}
-                />
+                <Image source={{ uri: 'https://i.ibb.co/v4PMmTg/Lock.png' }} style={styles.lockSize} />
               ) : null}
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleLevel4}>
             <View style={styles.levelsContainer}>
-              <Image
-                source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level4.png')}
-                style={styles.bodyItem}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/47ZjbXS/Level4.png' }} style={styles.bodyItem} />
               {lockLevel4 ? (
-                <Image
-                  source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Lock.png')}
-                  style={styles.lockSize}
-                />
+                <Image source={{ uri: 'https://i.ibb.co/v4PMmTg/Lock.png' }} style={styles.lockSize} />
               ) : null}
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleLevel5}>
             <View style={styles.levelsContainer}>
-              <Image
-                source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level5.png')}
-                style={styles.bodyItem}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/fMx9TGw/Level5.png' }} style={styles.bodyItem} />
               {lockLevel5 ? (
-                <Image
-                  source={require('../../../../assets/NewAssets/ExploreGames/GuessEmotion/Lock.png')}
-                  style={styles.lockSize}
-                />
+                <Image source={{ uri: 'https://i.ibb.co/v4PMmTg/Lock.png' }} style={styles.lockSize} />
               ) : null}
             </View>
           </TouchableOpacity>
@@ -330,7 +295,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
- 
   },
   itemContainer: {
     flex: 1,

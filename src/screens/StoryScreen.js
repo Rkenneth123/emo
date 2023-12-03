@@ -90,10 +90,7 @@ export default function StoryScreen({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-              <Image
-                source={require('../../assets/NewAssets/Dashboard/close.png')}
-                style={styles.close}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -111,43 +108,25 @@ export default function StoryScreen({ navigation }) {
   }
 
   return (
-    <ImageBackground
-      source={require('../../assets/NewAssets/Story/Story.png')}
-      style={styles.backgroundImage}
-    >
+    <ImageBackground source={require('../../assets/NewAssets/Story/Story.png')} style={styles.backgroundImage}>
       <View style={styles.container}>
         <View style={styles.containerHeader}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Back.png')}
-              style={styles.headerBack}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
-            <Image
-              source={require('../../assets/NewAssets/Dashboard/Settings.png')}
-              style={styles.headerSettings}
-            />
+            <Image source={require('../../assets/NewAssets/Dashboard/Settings.png')} style={styles.headerSettings} />
           </TouchableOpacity>
         </View>
         <View style={styles.bodyContent}>
           <TouchableOpacity onPress={handlePress1stStory}>
-            <Image
-              source={require('../../assets/NewAssets/Story/TalkingWithFriends.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/vstq2DS/Talking-With-Friends.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePress2ndStory}>
-            <Image
-              source={require('../../assets/NewAssets/Story/ButterflyGarden.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/2yhJSHy/Butterfly-Garden.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
           <TouchableOpacity onPress={handlePress3rdStory}>
-            <Image
-              source={require('../../assets/NewAssets/Story/ControllingAnger.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/fdSSyLW/Controlling-Anger.png' }} style={styles.bodyItem} />
           </TouchableOpacity>
         </View>
       </View>

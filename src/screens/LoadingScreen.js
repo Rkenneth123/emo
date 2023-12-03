@@ -23,10 +23,7 @@ export default function LoadingScreen({ navigation }) {
     >
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <TouchableOpacity onPress={handlePress}>
-          <Image
-            source={require('../../assets/NewAssets/StartPage/PlayButton.png')}
-            style={styles.image2}
-          />
+          <Image source={require('../../assets/NewAssets/StartPage/PlayButton.png')} style={styles.image2} />
         </TouchableOpacity>
       </View>
     </ImageBackground>
@@ -44,6 +41,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 100,
     marginTop: 300,
-    marginBottom: 80
+    marginBottom: 80,
   },
 });

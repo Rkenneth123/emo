@@ -248,7 +248,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
     setPart(0);
     setPart(part + 1);
     setTimeout(async () => {
-      await Speech.speak(storyLine1, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine1, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue(word);
         word += 1;
@@ -262,7 +262,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine2, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine2, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue1(word);
         word += 1;
@@ -278,7 +278,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine3, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine3, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue2(word);
         word += 1;
@@ -294,7 +294,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine4, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine4, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue3(word);
         word += 1;
@@ -310,7 +310,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine5, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine5, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue4(word);
         word += 1;
@@ -326,7 +326,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine6, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine6, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue5(word);
         word += 1;
@@ -342,7 +342,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       word = 0;
       setShowQuestion(false);
       setPart(part + 1);
-      await Speech.speak(storyLine7, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
+      Speech.speak(storyLine7, { pitch: 1.1, rate: 0.75, quality: 'Enhanced' });
       const update = () => {
         setValue6(word);
         word += 1;
@@ -398,10 +398,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       {part === 0 ? (
         <View style={styles.container}>
           <View style={styles.firstPage}>
-            <Image
-              source={require('../../../assets/NewAssets/Story/TalkingWithFriends.png')}
-              style={styles.bodyItem}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/vstq2DS/Talking-With-Friends.png' }} style={styles.bodyItem} />
             <Button title='Start' onPress={startPage} />
           </View>
         </View>
@@ -512,9 +509,7 @@ export default function AudioBookTalkingWithFriends({ navigation }) {
       ) : null}
       {showQuestion && question === 6 ? (
         <View style={styles.questionContainer}>
-          <Text style={styles.questionText}>
-            Olivia and Noah apologize to Ethan, What should Ethan do?
-          </Text>
+          <Text style={styles.questionText}>Olivia and Noah apologize to Ethan, What should Ethan do?</Text>
           <View style={styles.optionTextContainer}>
             {questions[5].options.map((option) => {
               return (

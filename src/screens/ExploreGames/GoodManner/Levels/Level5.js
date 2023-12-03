@@ -218,10 +218,7 @@ export default function GoodEmotionLevel5({ navigation }) {
           <View style={styles.itemContainer}>
             <Text style={styles.textSetting}>Setting</Text>
             <TouchableOpacity onPress={() => setOpenModal(false)}>
-              <Image
-                source={require('../../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level1/close.png')}
-                style={styles.close}
-              />
+              <Image source={{ uri: 'https://i.ibb.co/dB0qgj6/close.png' }} style={styles.close} />
             </TouchableOpacity>
             <Text style={styles.textLabel}>{name}</Text>
             <Text>Name</Text>
@@ -246,10 +243,7 @@ export default function GoodEmotionLevel5({ navigation }) {
       <View style={styles.container}>
         <View style={!showFinalResults ? styles.containerHeader : styles.containerHeader2}>
           <TouchableOpacity onPress={handlePressBack}>
-            <Image
-              source={require('../../../../../assets/NewAssets/Dashboard/Back.png')}
-              style={styles.headerBack}
-            />
+            <Image source={{ uri: 'https://i.ibb.co/hHGcr3x/Back.png' }} style={styles.headerBack} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
             <Image
@@ -341,10 +335,7 @@ export default function GoodEmotionLevel5({ navigation }) {
                   />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handleGameReset}>
-                  <Image
-                    source={require('../../../../../assets/NewAssets/ExploreGames/GuessEmotion/Level1/Regame.png')}
-                    style={styles.menu}
-                  />
+                  <Image source={{ uri: 'https://i.ibb.co/3FkHvNN/Regame.png' }} style={styles.menu} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handleNextLevel}>
                   <Image
