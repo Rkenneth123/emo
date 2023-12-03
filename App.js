@@ -5,6 +5,8 @@ import { Audio } from 'expo-av';
 import LoadingScreen from './src/screens/LoadingScreen';
 import UserDetailsScreen from './src/screens/UserDetailsScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
+import AchievementScreen from './src/screens/AchievementScreen';
+import TrophyScreen from './src/screens/TrophyScreen';
 import { useEffect } from 'react';
 import StoryScreen from './src/screens/StoryScreen';
 import ExploreGamesScreen from './src/screens/ExploreGamesScreen';
@@ -74,6 +76,8 @@ const AppRoutes = () => {
           <Stack.Screen name='Loading' component={LoadingScreen} />
           <Stack.Screen name='Landing' component={UserDetailsScreen} />
           <Stack.Screen name='Dashboard' component={DashboardScreen} />
+          <Stack.Screen name='Achievement' component={AchievementScreen} />
+          <Stack.Screen name='Trophy' component={TrophyScreen} />
           <Stack.Screen
             name='Story'
             component={StoryScreen}

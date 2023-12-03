@@ -27,6 +27,14 @@ export default function DailyActivityScreen({ navigation }) {
   const handlePressBack = async () => {
     navigation.navigate('Dashboard');
   };
+
+  const handlePressAchievement = () => {
+    navigation.navigate('Achievement');
+  };
+
+  const handlePressTrophy = () => {
+    navigation.navigate('Trophy');
+  };
   const load = async () => {
     const itemName = await AsyncStorage.getItem('Name');
     const itemGender = await AsyncStorage.getItem('Gender');
@@ -173,6 +181,19 @@ export default function DailyActivityScreen({ navigation }) {
               style={styles.headerBack}
             />
           </TouchableOpacity>
+          <TouchableOpacity onPress={handlePressTrophy}>
+            <Image
+              source={require('../../assets/NewAssets/dailyActivity/trophy.png')}
+              style={styles.headertrophy}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handlePressAchievement}>
+            <Image
+              source={require('../../assets/NewAssets/dailyActivity/Achievements.png')}
+              style={styles.headerachievement}
+            />
+          </TouchableOpacity>
           <TouchableOpacity onPress={() => setOpenModal(true)}>
             <Image
               source={require('../../assets/NewAssets/dailyActivity/Settings.png')}
@@ -314,6 +335,20 @@ const styles = StyleSheet.create({
     margin: 0,
     height: 80,
     width: 80,
+    resizeMode: 'stretch',
+  },
+  headertrophy: {
+    margin: 0,
+    height: 50,
+    marginLeft: 350,
+    width: 50,
+    resizeMode: 'stretch',
+  },
+  headerachievement: {
+    margin: 0,
+    height: 50,
+    marginLeft: -10,
+    width: 50,
     resizeMode: 'stretch',
   },
   headerSettings: {
